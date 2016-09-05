@@ -134,5 +134,6 @@ final class DAOMySQLi{
 	}
 	private function __clone(){}
 
+	
 
 }
