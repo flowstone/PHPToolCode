@@ -1,5 +1,9 @@
 <?php
 
+/*
+*验证码生成
+*
+*/
 class CheckCode{
     //验证码位数
     private $mCheckCodeNum=4;
@@ -13,14 +17,14 @@ class CheckCode{
     private $mCheckImageWidth='80';
     //验证码图片高度
     private $mCheckImageHeight='20';
-      
+
     /**
      * 输出头
      */
     public function OutFileHeader(){
         header("content-type:image/png");
     }
-      
+
    public function getCheckCode(){
 		return $this->mCheckCode;
    }
@@ -31,7 +35,7 @@ class CheckCode{
         $this->mCheckCode=strtoupper(substr(md5(rand()),0,$this->mCheckCodeNum));
         return $this->mCheckCode;
     }
-      
+
     /**
      * 生成验证码图片
      */
@@ -40,7 +44,7 @@ class CheckCode{
         imagecolorallocate($this->mCheckImage,200,200,200);
         return $this->mCheckImage;
     }
-      
+
     /**
      * 设置干扰素
      */
@@ -50,7 +54,7 @@ class CheckCode{
             imagesetpixel($this->mCheckImage,rand(2,128),rand(2,38), $this->mDisturbColor);
         }
     }
-      
+
     /**
      * 设置验证码图片的大小
      * @param int $width
@@ -64,7 +68,7 @@ class CheckCode{
         $this->mCheckImageHeight=$height;
         return true;
     }
-      
+
     /**
      * 将验证码逐个画到验证图片上
      */
@@ -77,7 +81,7 @@ class CheckCode{
             imagechar($this->mCheckImage,5,$x,$y,$this->mCheckCode[$i],$bg_color);
         }
     }
-      
+
     /**
      * 输出验证码图片
      */
@@ -90,8 +94,7 @@ class CheckCode{
         imagepng($this->mCheckImage);
         imagedestroy($this->mCheckImage);
     }
-      
+
 }
 
 ?>
-
