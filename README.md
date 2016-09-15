@@ -73,3 +73,4 @@
 - Json工具→[Json.class.php](https://github.com/flowstone/PHPToolCode/blob/master/Other/Json.class.php)
   - 数据编译为json字符串 encode
   - json字符串解码为数组 decode
+ 常用方法[Function.class.php](https://github.com/flowstone/PHPToolCode/blob/master/Other/Functions.class.php)
