@@ -1,4 +1,4 @@
-# PHP开发人员必须收集的常用工具类代码([停止更新](https://github.com/flowstone/PHPToolCode/blob/master/update_log.md))
+# PHP开发人员必须收集的常用工具类代码([更新日志](https://github.com/flowstone/PHPToolCode/blob/master/update_log.md))
 常用工具类文件
 ### 目录如下
 
